@@ -1,8 +1,12 @@
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestClosed, function (sprite, location) {
-    if (true) {
-    	
+    if (randint(0, 3) == 0) {
+        game.showLongText("you have collected 10 gold coins", DialogLayout.Bottom)
+    } else if (randint(0, 3) == 1) {
+        game.showLongText("you have collected wolf skin", DialogLayout.Bottom)
+    } else if (randint(0, 3) == 2) {
+        game.showLongText("you have collected a diamond", DialogLayout.Bottom)
     } else {
-    	
+        game.showLongText("you have collected amber", DialogLayout.Bottom)
     }
 })
 tiles.setTilemap(tilemap`level1`)
